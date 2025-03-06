@@ -4,7 +4,7 @@ const path = require('path');
 // Liste von Dateien und Ordnern, die NICHT nach `dist/` kopiert werden sollen
 const excludeFiles = [
     'package.json', 'package-lock.json', 'prepare-dist.js',
-    '.gitignore', 'node_modules', 'dist1', '.git', 'original_Bilder', 'rename.py', 'heic_to_webp.py', 'heic_to_jpg.py'
+    '.gitignore', 'node_modules', 'dist1', '.git', 'original_Bilder', 'rename.py', 'heic_to_webp.py', 'compress.py'
 ];
 
 // Funktion zum rekursiven Kopieren von Dateien & Ordnern mit Ausschlussregeln
