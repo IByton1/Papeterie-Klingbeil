@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Papeterie Klingbeil</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        /* Hero-Section Beispiel */
+        #hero {
+            min-height: 60vh;
+            background: url('../assets/img/hero.webp') center center/cover no-repeat;
+            position: relative;
+            color: #fff;
+        }
+
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            /* dunkler Overlay-Effekt */
+        }
+
+        #hero .hero-content {
+            position: relative;
+            z-index: 1;
+            /* über Overlay */
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        /* Galerie: Masonry-ähnliches Grid */
+        .grid-container {
+            display: grid;
+            /* Mit auto-fill + minmax füllt das Grid dynamisch den Platz */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            /* Automatische Zeilenhöhe (wir nutzen grid-auto-rows + Span-Klassen) */
+            grid-auto-rows: 200px;
+            gap: 10px;
+            margin-top: 50px;
+            /* etwas Abstand zum Titel */
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Größere Felder: doppelte Höhe oder doppelte Breite */
+        .grid-item.big {
+            grid-row: span 2;
+            /* doppelte Höhe */
+        }
+
+        .grid-item.wide {
+            grid-column: span 2;
+            /* doppelte Breite */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/img/logo.webp" alt="Papeterie Klingbeil Logo" class="rounded-circle">
+                <span>Papeterie Klingbeil</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#products">Sortiment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#features">Exklusivitäten</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Galerie</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero-Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="display-4">Willkommen in unserer Galerie</h1>
+            <p class="lead">Entdecke die schönsten Eindrücke</p>
+        </div>
+    </section>
+
+    <!-- Galerie-Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="grid-container">
+                <!-- 30 Bilder-Beispiele (passe Pfade an deine Dateien an) -->
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image1.webp" alt="Bild 1">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image2.webp" alt="Bild 2">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image3.webp" alt="Bild 3">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image4.webp" alt="Bild 4">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/image5.webp" alt="Bild 5">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image6.webp" alt="Bild 6">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image7.webp" alt="Bild 7">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image8.webp" alt="Bild 8">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image9.webp" alt="Bild 9">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image10.webp" alt="Bild 10">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/image11.webp" alt="Bild 11">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image12.webp" alt="Bild 12">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image13.webp" alt="Bild 13">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image14.webp" alt="Bild 14">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image15.webp" alt="Bild 15">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image16.webp" alt="Bild 16">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image17.webp" alt="Bild 17">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/image18.webp" alt="Bild 18">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image19.webp" alt="Bild 19">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image20.webp" alt="Bild 20">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image21.webp" alt="Bild 21">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image22.webp" alt="Bild 22">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image23.webp" alt="Bild 23">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image24.webp" alt="Bild 24">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image25.webp" alt="Bild 25">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/image26.webp" alt="Bild 26">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image27.webp" alt="Bild 27">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image28.webp" alt="Bild 28">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image29.webp" alt="Bild 29">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image30.webp" alt="Bild 30">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image31.webp" alt="Bild 31">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image32.webp" alt="Bild 32">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image33.webp" alt="Bild 33">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image34.webp" alt="Bild 34">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/image35.webp" alt="Bild 35">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image36.webp" alt="Bild 36">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image37.webp" alt="Bild 37">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image38.webp" alt="Bild 38">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image39.webp" alt="Bild 39">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image40.webp" alt="Bild 40">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/image41.webp" alt="Bild 41">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image42.webp" alt="Bild 42">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image43.webp" alt="Bild 43">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/image44.webp" alt="Bild 44">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/image45.webp" alt="Bild 45">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/image46.webp" alt="Bild 46">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+#
