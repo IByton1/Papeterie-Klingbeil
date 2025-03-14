@@ -1,6 +1,6 @@
 .image-overlay img {
     max-height: 450px;
-    min-width: 400px;
+    min-width: 100%;
 }
 
 #products .carousel-item img {

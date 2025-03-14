@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "node prepare-dist.js",
-    "deploy": "gh-pages -d dist1"
+    "deploy": "gh-pages -d dist1",
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +17,11 @@
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "gh-pages": "^6.3.0",
+    "terser": "^5.39.0",
+    "vite": "^6.2.2",
+    "vite-plugin-compression": "^0.5.1"
   },
   "homepage": "https://ibyton1.github.io/MockupWebseite/"
 }
