@@ -24,13 +24,11 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.4);
-            /* dunkler Overlay-Effekt */
         }
 
         #hero .hero-content {
             position: relative;
             z-index: 1;
-            /* über Overlay */
             text-align: center;
             padding: 100px 20px;
         }
@@ -38,13 +36,10 @@
         /* Galerie: Masonry-ähnliches Grid */
         .grid-container {
             display: grid;
-            /* Mit auto-fill + minmax füllt das Grid dynamisch den Platz */
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            /* Automatische Zeilenhöhe (wir nutzen grid-auto-rows + Span-Klassen) */
             grid-auto-rows: 200px;
             gap: 10px;
             margin-top: 50px;
-            /* etwas Abstand zum Titel */
         }
 
         .grid-item {
@@ -63,16 +58,21 @@
             transform: scale(1.1);
         }
 
-        /* Größere Felder: doppelte Höhe oder doppelte Breite */
+        /* Layout-Klassen */
+        /* HF-Bilder dürfen niemals 2 Spalten ohne entsprechende Höhe einnehmen – sie können:
+         - Standard (1×1),
+         - 1×2 (mit der Klasse "big") oder
+         - 2×2 (mit den Klassen "big" und "wide" zusammen)
+    */
         .grid-item.big {
             grid-row: span 2;
-            /* doppelte Höhe */
         }
 
         .grid-item.wide {
             grid-column: span 2;
-            /* doppelte Breite */
         }
+
+        /* QF-Bilder dürfen nie die Klasse "big" erhalten – sie bleiben 1×1 oder werden 2×1 (wide) */
     </style>
 </head>
 
@@ -92,7 +92,8 @@
                     <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#products">Sortiment</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#features">Exklusivitäten</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Über-uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#contact">Kontakt</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Galerie</a></li>
                 </ul>
@@ -112,146 +113,270 @@
     <section id="gallery" class="py-5">
         <div class="container">
             <div class="grid-container">
-                <!-- 30 Bilder-Beispiele (passe Pfade an deine Dateien an) -->
+                <!-- Gruppe 1: HF Bilder 1–5, QF Bild 1 -->
                 <div class="grid-item big wide">
-                    <img src="../assets/gallery/image1.webp" alt="Bild 1">
+                    <img src="../assets/gallery/1hf.webp" alt="Bild 1" loading="lazy">
                 </div>
                 <div class="grid-item">
-                    <img src="../assets/gallery/image2.webp" alt="Bild 2">
+                    <img src="../assets/gallery/2hf.webp" alt="Bild 2" loading="lazy">
                 </div>
                 <div class="grid-item">
-                    <img src="../assets/gallery/image3.webp" alt="Bild 3">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image4.webp" alt="Bild 4">
+                    <img src="../assets/gallery/3hf.webp" alt="Bild 3" loading="lazy">
                 </div>
                 <div class="grid-item big">
-                    <img src="../assets/gallery/image5.webp" alt="Bild 5">
+                    <img src="../assets/gallery/4hf.webp" alt="Bild 4" loading="lazy">
                 </div>
                 <div class="grid-item">
-                    <img src="../assets/gallery/image6.webp" alt="Bild 6">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image7.webp" alt="Bild 7">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image8.webp" alt="Bild 8">
+                    <img src="../assets/gallery/5hf.webp" alt="Bild 5" loading="lazy">
                 </div>
                 <div class="grid-item wide">
-                    <img src="../assets/gallery/image9.webp" alt="Bild 9">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image10.webp" alt="Bild 10">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image11.webp" alt="Bild 11">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image12.webp" alt="Bild 12">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image13.webp" alt="Bild 13">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image14.webp" alt="Bild 14">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image15.webp" alt="Bild 15">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image16.webp" alt="Bild 16">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image17.webp" alt="Bild 17">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image18.webp" alt="Bild 18">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image19.webp" alt="Bild 19">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image20.webp" alt="Bild 20">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image21.webp" alt="Bild 21">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image22.webp" alt="Bild 22">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image23.webp" alt="Bild 23">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image24.webp" alt="Bild 24">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image25.webp" alt="Bild 25">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image26.webp" alt="Bild 26">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image27.webp" alt="Bild 27">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image28.webp" alt="Bild 28">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image29.webp" alt="Bild 29">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image30.webp" alt="Bild 30">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image31.webp" alt="Bild 31">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image32.webp" alt="Bild 32">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image33.webp" alt="Bild 33">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image34.webp" alt="Bild 34">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image35.webp" alt="Bild 35">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image36.webp" alt="Bild 36">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image37.webp" alt="Bild 37">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image38.webp" alt="Bild 38">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image39.webp" alt="Bild 39">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image40.webp" alt="Bild 40">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image41.webp" alt="Bild 41">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image42.webp" alt="Bild 42">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image43.webp" alt="Bild 43">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image44.webp" alt="Bild 44">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image45.webp" alt="Bild 45">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image46.webp" alt="Bild 46">
+                    <img src="../assets/gallery/1qf.webp" alt="Bild 6" loading="lazy">
                 </div>
 
+                <!-- Gruppe 2: HF Bilder 6–10, QF Bild 2 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/6hf.webp" alt="Bild 7" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/7hf.webp" alt="Bild 8" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/8hf.webp" alt="Bild 9" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/9hf.webp" alt="Bild 10" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/10hf.webp" alt="Bild 11" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/2qf.webp" alt="Bild 12" loading="lazy">
+                </div>
+
+                <!-- Gruppe 3: HF Bilder 11–15, QF Bild 3 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/11hf.webp" alt="Bild 13" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/12hf.webp" alt="Bild 14" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/13hf.webp" alt="Bild 15" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/14hf.webp" alt="Bild 16" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/15hf.webp" alt="Bild 17" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/3qf.webp" alt="Bild 18" loading="lazy">
+                </div>
+
+                <!-- Gruppe 4: HF Bilder 16–20, QF Bild 4 -->
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/16hf.webp" alt="Bild 19" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/17hf.webp" alt="Bild 20" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/18hf.webp" alt="Bild 21" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/19hf.webp" alt="Bild 22" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/20hf.webp" alt="Bild 23" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/4qf.webp" alt="Bild 24" loading="lazy">
+                </div>
+
+                <!-- Gruppe 5: HF Bilder 21–25, QF Bild 5 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/21hf.webp" alt="Bild 25" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/22hf.webp" alt="Bild 26" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/23hf.webp" alt="Bild 27" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/24hf.webp" alt="Bild 28" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/25hf.webp" alt="Bild 29" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/5qf.webp" alt="Bild 30" loading="lazy">
+                </div>
+
+                <!-- Gruppe 6: HF Bilder 26–30, QF Bild 6 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/26hf.webp" alt="Bild 31" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/27hf.webp" alt="Bild 32" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/28hf.webp" alt="Bild 33" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/29hf.webp" alt="Bild 34" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/30hf.webp" alt="Bild 35" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/6qf.webp" alt="Bild 36" loading="lazy">
+                </div>
+
+                <!-- Gruppe 7: HF Bilder 31–35, QF Bild 7 -->
+                <div class="grid-item big">
+                    <img src="../assets/gallery/31hf.webp" alt="Bild 37" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/32hf.webp" alt="Bild 38" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/33hf.webp" alt="Bild 39" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/34hf.webp" alt="Bild 40" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/35hf.webp" alt="Bild 41" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/7qf.webp" alt="Bild 42" loading="lazy">
+                </div>
+
+                <!-- Gruppe 8: HF Bilder 36–40, QF Bild 8 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/36hf.webp" alt="Bild 43" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/37hf.webp" alt="Bild 44" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/38hf.webp" alt="Bild 45" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/39hf.webp" alt="Bild 46" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/40hf.webp" alt="Bild 47" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/8qf.webp" alt="Bild 48" loading="lazy">
+                </div>
+
+                <!-- Gruppe 9: HF Bilder 41–45, QF Bild 9 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/41hf.webp" alt="Bild 49" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/42hf.webp" alt="Bild 50" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/43hf.webp" alt="Bild 51" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/44hf.webp" alt="Bild 52" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/45hf.webp" alt="Bild 53" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/9qf.webp" alt="Bild 54" loading="lazy">
+                </div>
+
+                <!-- Gruppe 10: HF Bilder 46–50, QF Bild 10 -->
+                <div class="grid-item big">
+                    <img src="../assets/gallery/46hf.webp" alt="Bild 55" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/47hf.webp" alt="Bild 56" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/48hf.webp" alt="Bild 57" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/49hf.webp" alt="Bild 58" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/50hf.webp" alt="Bild 59" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/10qf.webp" alt="Bild 60" loading="lazy">
+                </div>
+
+                <!-- Gruppe 11: HF Bilder 51–55, QF Bild 11 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/51hf.webp" alt="Bild 61" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/52hf.webp" alt="Bild 62" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/53hf.webp" alt="Bild 63" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/54hf.webp" alt="Bild 64" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/55hf.webp" alt="Bild 65" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/11qf.webp" alt="Bild 66" loading="lazy">
+                </div>
+
+                <!-- Gruppe 12: HF Bilder 56–60, QF Bild 12 -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/56hf.webp" alt="Bild 67" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/57hf.webp" alt="Bild 68" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/58hf.webp" alt="Bild 69" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/59hf.webp" alt="Bild 70" loading="lazy">
+                </div>
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/60hf.webp" alt="Bild 71" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/12qf.webp" alt="Bild 72" loading="lazy">
+                </div>
+
+                <!-- Gruppe 13: HF Bilder 61–65, QF Bild 13 -->
+                <div class="grid-item big wide">
+                    <img src="../assets/gallery/61hf.webp" alt="Bild 73" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/62hf.webp" alt="Bild 74" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/63hf.webp" alt="Bild 75" loading="lazy">
+                </div>
+                <div class="grid-item big">
+                    <img src="../assets/gallery/64hf.webp" alt="Bild 76" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/gallery/65hf.webp" alt="Bild 77" loading="lazy">
+                </div>
+                <div class="grid-item wide">
+                    <img src="../assets/gallery/13qf.webp" alt="Bild 78" loading="lazy">
+                </div>
+
+                <!-- Abschließendes HF-Bild (Nr. 66) -->
+                <div class="grid-item">
+                    <img src="../assets/gallery/66hf.webp" alt="Bild 79" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
@@ -260,4 +385,3 @@
 </body>
 
 </html>
-#

@@ -1,6 +1,6 @@
 .image-overlay img {
     max-height: 450px;
-    min-width: 400px;
+    width: 100%;
 }
 
 #products .carousel-item img {
@@ -66,6 +66,7 @@
         opacity: 1;
     }
 }
+
 
 .accordion-button:focus,
 .accordion-button:active {
