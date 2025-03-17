@@ -12,7 +12,6 @@
     position: relative;
 }
 
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1);
@@ -22,10 +21,9 @@
     width: 600px;
     height: 600px;
     object-fit: cover;
-
 }
 
-
+/* Beschriftung der Slides */
 .carousel-caption {
     position: absolute;
     bottom: 10%;
@@ -36,6 +34,20 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     color: white;
+}
+
+/* =============================== */
+/* Übergangs-Effekt für den Slider */
+/* =============================== */
+#products .carousel-item {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+#products .carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 @media (min-width: 768px) {
@@ -67,9 +79,33 @@
     }
 }
 
-
 .accordion-button:focus,
 .accordion-button:active {
     outline: none !important;
     box-shadow: none !important;
+}
+
+/* ===================== */
+/* Slide-in Animationen  */
+/* ===================== */
+
+/* Text: Startet links außerhalb des Sichtbereichs */
+.text-slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease-in-out;
+}
+
+/* Bilder: Starten rechts außerhalb des Sichtbereichs */
+.image-slide-in {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease-in-out;
+}
+
+/* Sobald die Animation aktiviert wird, werden die Elemente sichtbar und in ihre Endposition gebracht */
+.text-slide-in.show,
+.image-slide-in.show {
+    opacity: 1;
+    transform: translateX(0);
 }
