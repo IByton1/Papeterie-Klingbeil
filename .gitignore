@@ -10,6 +10,7 @@ yarn.lock
 
 # Build artifacts
 dist1/
+dist/
 build/
 
 # Logs

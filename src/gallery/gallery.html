@@ -5,75 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie - Papeterie Klingbeil</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <style>
-        /* Hero-Section Beispiel */
-        #hero {
-            min-height: 60vh;
-            background: url('../assets/img/hero.webp') center center/cover no-repeat;
-            position: relative;
-            color: #fff;
-        }
-
-        #hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        #hero .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        /* Galerie: Masonry-ähnliches Grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            grid-auto-rows: 200px;
-            gap: 10px;
-            margin-top: 50px;
-        }
-
-        .grid-item {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .grid-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .grid-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Layout-Klassen */
-        /* HF-Bilder dürfen niemals 2 Spalten ohne entsprechende Höhe einnehmen – sie können:
-         - Standard (1×1),
-         - 1×2 (mit der Klasse "big") oder
-         - 2×2 (mit den Klassen "big" und "wide" zusammen)
-    */
-        .grid-item.big {
-            grid-row: span 2;
-        }
-
-        .grid-item.wide {
-            grid-column: span 2;
-        }
-
-        /* QF-Bilder dürfen nie die Klasse "big" erhalten – sie bleiben 1×1 oder werden 2×1 (wide) */
-    </style>
+    <script type="module" src="gallery.js"></script>
 </head>
 
 <body>

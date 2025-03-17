@@ -26,7 +26,11 @@
 }
 
 .nav-item {
+<<<<<<< HEAD:assets/css/main.css
     margin-right: 5px;
+=======
+    margin-right: 10px;
+>>>>>>> 96feecf85ae7abfa9cdac3f2754f8a23d518b760:src/assets/css/main.css
 }
 
 .welcome {
