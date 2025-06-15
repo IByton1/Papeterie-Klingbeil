@@ -75,8 +75,38 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+}
+
 .hero-text {
     font-size: 1.4rem;
     font-weight: 500;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer .container a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer .container a:hover {
+    color: #007bff;
 }

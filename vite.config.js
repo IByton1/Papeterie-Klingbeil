@@ -25,6 +25,8 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'src/index.html'),
         gallery: path.resolve(__dirname, 'src/gallery/gallery.html'),
+        impressum: path.resolve(__dirname, 'src/impressum/impressum.html'),
+        datenschutz: path.resolve(__dirname, 'src/datenschutzerklärung/datenschutzerklärung.html'),
       },
     },
   },
