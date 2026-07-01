@@ -7,6 +7,7 @@ export default defineConfig({
   root: 'src',
   build: {
     outDir: '../dist',
+    emptyOutDir: true, // Leert dist/ vor jedem Build (sonst bleiben alte Dateien liegen)
     minify: 'terser',  // Nutzt Terser für bessere Komprimierung
     terserOptions: {
       compress: {

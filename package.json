@@ -7,6 +7,7 @@
     "predeploy": "node prepare-dist.js",
     "deploy": "gh-pages -d dist1",
     "dev": "vite",
+    "optimize": "node optimize-images.js",
     "build": "vite build"
   },
   "keywords": [],
