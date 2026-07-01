@@ -84,10 +84,10 @@ body {
     }
 }
 
-.accordion-button:focus,
-.accordion-button:active {
-    outline: none !important;
-    box-shadow: none !important;
+.accordion-button:focus {
+    box-shadow: none;
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
 }
 
 /* ===================== */
