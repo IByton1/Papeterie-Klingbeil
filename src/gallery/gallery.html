@@ -1,337 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galerie der Papeterie Klingbeil in Jena – Eindrücke aus unserem Geschäft.">
-    <title>Galerie - Papeterie Klingbeil</title>
-    <link rel="preload" as="image" href="../assets/img/hero.webp" fetchpriority="high">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galerie der Papeterie Klingbeil in Jena – 79 Eindrücke aus unserem Geschäft und Sortiment.">
+    <meta name="theme-color" content="#06191b">
+    <title>Galerie · Papeterie Klingbeil Jena</title>
+    <link rel="canonical" href="https://www.papeterie-klingbeil.de/gallery/gallery.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Papeterie Klingbeil">
+    <meta property="og:title" content="Galerie · Papeterie Klingbeil Jena">
+    <meta property="og:description" content="79 Einblicke in unseren Laden, auf feine Schreibgeräte, besonderes Papier und Geschenkideen mit Charakter.">
+    <meta property="og:url" content="https://www.papeterie-klingbeil.de/gallery/gallery.html">
+    <meta property="og:image" content="https://www.papeterie-klingbeil.de/og-papeterie-klingbeil.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Papeterie Klingbeil – Schreibkultur in Jena">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galerie · Papeterie Klingbeil Jena">
+    <meta name="twitter:description" content="79 Einblicke in unseren Laden und unser besonderes Sortiment.">
+    <meta name="twitter:image" content="https://www.papeterie-klingbeil.de/og-papeterie-klingbeil.jpg">
+    <link rel="preload" as="image" href="../assets/gallery/1hf-600.webp" fetchpriority="high">
     <script type="module" src="gallery.js"></script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../assets/img/logo.webp" alt="Papeterie Klingbeil Logo" class="rounded-circle">
-                <span>Papeterie Klingbeil</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <a class="skip-link" href="#gallery">Zur Galerie springen</a>
+
+    <header class="gallery-header" data-header>
+        <a class="brand" href="../index.html" aria-label="Papeterie Klingbeil – zur Startseite">
+            <img src="../assets/img/logo-v2-transparent.png" alt="Papeterie Klingbeil Jena" width="900" height="487">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="gallery-navigation" aria-label="Menü öffnen" data-menu-toggle>
+            <i class="ph ph-list" aria-hidden="true"></i>
+        </button>
+
+        <nav class="gallery-navigation" id="gallery-navigation" aria-label="Hauptnavigation" data-navigation>
+            <a href="../index.html#sortiment">Sortiment</a>
+            <a href="../index.html#besonderheiten">Besonderheiten</a>
+            <a href="../index.html#laden">Unser Laden</a>
+            <a class="is-active" href="#gallery" aria-current="page">Galerie</a>
+        </nav>
+
+        <a class="button button--compact header-cta" href="../index.html#kontakt">Besuch planen</a>
+    </header>
+
+    <main>
+        <section class="gallery-hero" aria-labelledby="gallery-title">
+            <div class="gallery-hero__rail" aria-hidden="true">
+                <span>Jena</span>
+                <span>Saalstraße 21</span>
+            </div>
+
+            <div class="gallery-hero__copy">
+                <p class="eyebrow">Papeterie · Schreibkultur · Jena</p>
+                <h1 id="gallery-title">Augenblicke.<br>Mit Liebe<br>ausgewählt.</h1>
+                <div class="accent-line" aria-hidden="true"></div>
+                <p>Ein Blick in unseren Laden, auf feine Schreibgeräte, besonderes Papier und Geschenkideen mit Charakter.</p>
+                <a class="text-link" href="#gallery">79 Eindrücke entdecken <i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="gallery-hero__images" aria-label="Vorschau aus der Galerie">
+                <figure class="gallery-hero__image gallery-hero__image--wide">
+                    <img src="../assets/gallery/1qf-600.webp" alt="Einblick in die Papeterie Klingbeil" width="600" height="400" fetchpriority="high" decoding="async">
+                </figure>
+                <figure class="gallery-hero__image gallery-hero__image--portrait">
+                    <img src="../assets/gallery/1hf-600.webp" alt="Detail aus dem Sortiment" width="450" height="600" fetchpriority="high" decoding="async">
+                </figure>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery" aria-labelledby="collection-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow--blue">Unser Laden in Bildern</p>
+                    <h2 id="collection-title">Entdecken Sie<br>jedes Detail.</h2>
+                </div>
+                <div class="section-heading__note">
+                    <p>Alle 79 Aufnahmen bleiben Teil der Galerie. Die großen Bilddateien laden erst, wenn Sie ein Motiv öffnen.</p>
+                    <p class="gallery-count"><span data-visible-count>0</span> von <span data-total-count>79</span> Bildern angezeigt</p>
+                </div>
+            </div>
+
+            <div class="gallery-grid" data-gallery-grid aria-live="polite"></div>
+            <div class="load-sentinel" data-load-sentinel aria-hidden="true"></div>
+
+            <button class="load-more" type="button" data-load-more>
+                Weitere Bilder zeigen
+                <i class="ph ph-arrow-down" aria-hidden="true"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#products">Sortiment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#features">Exklusivitäten</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Über-uns</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Kontakt</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Galerie</a></li>
-                </ul>
-            </div>
+        </section>
+
+        <section class="gallery-cta" aria-labelledby="gallery-cta-title">
+            <p class="eyebrow">Am schönsten ist es persönlich</p>
+            <h2 id="gallery-cta-title">Neugierig geworden?</h2>
+            <p>Entdecken Sie das Sortiment in Ruhe vor Ort – wir beraten Sie gern.</p>
+            <a class="button" href="../index.html#kontakt">Besuch planen</a>
+        </section>
+    </main>
+
+    <dialog class="lightbox" data-lightbox aria-labelledby="lightbox-caption">
+        <div class="lightbox__bar">
+            <p id="lightbox-caption" data-lightbox-caption>Bildansicht</p>
+            <button class="icon-button" type="button" aria-label="Bildansicht schließen" data-lightbox-close>
+                <i class="ph ph-x" aria-hidden="true"></i>
+            </button>
         </div>
-    </nav>
 
-    <!-- Hero-Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="display-4">Willkommen in unserer Galerie</h1>
-            <p class="lead">Entdecke die schönsten Eindrücke</p>
+        <div class="lightbox__stage">
+            <button class="icon-button lightbox__nav lightbox__nav--prev" type="button" aria-label="Vorheriges Bild" data-lightbox-prev>
+                <i class="ph ph-arrow-left" aria-hidden="true"></i>
+            </button>
+            <img data-lightbox-image src="" alt="">
+            <button class="icon-button lightbox__nav lightbox__nav--next" type="button" aria-label="Nächstes Bild" data-lightbox-next>
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </button>
         </div>
-    </section>
+    </dialog>
 
-    <!-- Galerie-Section -->
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <div class="grid-container">
-                <!-- Gruppe 1: HF Bilder 1–5, QF Bild 1 -->
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/1hf-600.webp" srcset="../assets/gallery/1hf-600.webp 600w, ../assets/gallery/1hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 1" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/2hf-600.webp" srcset="../assets/gallery/2hf-600.webp 600w, ../assets/gallery/2hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 2" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/3hf-600.webp" srcset="../assets/gallery/3hf-600.webp 600w, ../assets/gallery/3hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 3" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/4hf-600.webp" srcset="../assets/gallery/4hf-600.webp 600w, ../assets/gallery/4hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 4" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/5hf-600.webp" srcset="../assets/gallery/5hf-600.webp 600w, ../assets/gallery/5hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 5" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/1qf-600.webp" srcset="../assets/gallery/1qf-600.webp 600w, ../assets/gallery/1qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 6" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 2: HF Bilder 6–10, QF Bild 2 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/6hf-600.webp" srcset="../assets/gallery/6hf-600.webp 600w, ../assets/gallery/6hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 7" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/7hf-600.webp" srcset="../assets/gallery/7hf-600.webp 600w, ../assets/gallery/7hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 8" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/8hf-600.webp" srcset="../assets/gallery/8hf-600.webp 600w, ../assets/gallery/8hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 9" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/9hf-600.webp" srcset="../assets/gallery/9hf-600.webp 600w, ../assets/gallery/9hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 10" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/10hf-600.webp" srcset="../assets/gallery/10hf-600.webp 600w, ../assets/gallery/10hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 11" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/2qf-600.webp" srcset="../assets/gallery/2qf-600.webp 600w, ../assets/gallery/2qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 12" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 3: HF Bilder 11–15, QF Bild 3 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/11hf-600.webp" srcset="../assets/gallery/11hf-600.webp 600w, ../assets/gallery/11hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 13" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/12hf-600.webp" srcset="../assets/gallery/12hf-600.webp 600w, ../assets/gallery/12hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 14" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/13hf-600.webp" srcset="../assets/gallery/13hf-600.webp 600w, ../assets/gallery/13hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 15" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/14hf-600.webp" srcset="../assets/gallery/14hf-600.webp 600w, ../assets/gallery/14hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 16" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/15hf-600.webp" srcset="../assets/gallery/15hf-600.webp 600w, ../assets/gallery/15hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 17" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/3qf-600.webp" srcset="../assets/gallery/3qf-600.webp 600w, ../assets/gallery/3qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 18" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 4: HF Bilder 16–20, QF Bild 4 -->
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/16hf-600.webp" srcset="../assets/gallery/16hf-600.webp 600w, ../assets/gallery/16hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 19" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/17hf-600.webp" srcset="../assets/gallery/17hf-600.webp 600w, ../assets/gallery/17hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 20" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/18hf-600.webp" srcset="../assets/gallery/18hf-600.webp 600w, ../assets/gallery/18hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 21" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/19hf-600.webp" srcset="../assets/gallery/19hf-600.webp 600w, ../assets/gallery/19hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 22" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/20hf-600.webp" srcset="../assets/gallery/20hf-600.webp 600w, ../assets/gallery/20hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 23" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/4qf-600.webp" srcset="../assets/gallery/4qf-600.webp 600w, ../assets/gallery/4qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 24" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 5: HF Bilder 21–25, QF Bild 5 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/21hf-600.webp" srcset="../assets/gallery/21hf-600.webp 600w, ../assets/gallery/21hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 25" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/22hf-600.webp" srcset="../assets/gallery/22hf-600.webp 600w, ../assets/gallery/22hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 26" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/23hf-600.webp" srcset="../assets/gallery/23hf-600.webp 600w, ../assets/gallery/23hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 27" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/24hf-600.webp" srcset="../assets/gallery/24hf-600.webp 600w, ../assets/gallery/24hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 28" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/25hf-600.webp" srcset="../assets/gallery/25hf-600.webp 600w, ../assets/gallery/25hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 29" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/5qf-600.webp" srcset="../assets/gallery/5qf-600.webp 600w, ../assets/gallery/5qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 30" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 6: HF Bilder 26–30, QF Bild 6 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/26hf-600.webp" srcset="../assets/gallery/26hf-600.webp 600w, ../assets/gallery/26hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 31" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/27hf-600.webp" srcset="../assets/gallery/27hf-600.webp 600w, ../assets/gallery/27hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 32" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/28hf-600.webp" srcset="../assets/gallery/28hf-600.webp 600w, ../assets/gallery/28hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 33" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/29hf-600.webp" srcset="../assets/gallery/29hf-600.webp 600w, ../assets/gallery/29hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 34" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/30hf-600.webp" srcset="../assets/gallery/30hf-600.webp 600w, ../assets/gallery/30hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 35" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/6qf-600.webp" srcset="../assets/gallery/6qf-600.webp 600w, ../assets/gallery/6qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 36" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 7: HF Bilder 31–35, QF Bild 7 -->
-                <div class="grid-item big">
-                    <img src="../assets/gallery/31hf-600.webp" srcset="../assets/gallery/31hf-600.webp 600w, ../assets/gallery/31hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 37" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/32hf-600.webp" srcset="../assets/gallery/32hf-600.webp 600w, ../assets/gallery/32hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 38" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/33hf-600.webp" srcset="../assets/gallery/33hf-600.webp 600w, ../assets/gallery/33hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 39" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/34hf-600.webp" srcset="../assets/gallery/34hf-600.webp 600w, ../assets/gallery/34hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 40" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/35hf-600.webp" srcset="../assets/gallery/35hf-600.webp 600w, ../assets/gallery/35hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 41" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/7qf-600.webp" srcset="../assets/gallery/7qf-600.webp 600w, ../assets/gallery/7qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 42" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 8: HF Bilder 36–40, QF Bild 8 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/36hf-600.webp" srcset="../assets/gallery/36hf-600.webp 600w, ../assets/gallery/36hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 43" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/37hf-600.webp" srcset="../assets/gallery/37hf-600.webp 600w, ../assets/gallery/37hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 44" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/38hf-600.webp" srcset="../assets/gallery/38hf-600.webp 600w, ../assets/gallery/38hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 45" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/39hf-600.webp" srcset="../assets/gallery/39hf-600.webp 600w, ../assets/gallery/39hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 46" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/40hf-600.webp" srcset="../assets/gallery/40hf-600.webp 600w, ../assets/gallery/40hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 47" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/8qf-600.webp" srcset="../assets/gallery/8qf-600.webp 600w, ../assets/gallery/8qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 48" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 9: HF Bilder 41–45, QF Bild 9 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/41hf-600.webp" srcset="../assets/gallery/41hf-600.webp 600w, ../assets/gallery/41hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 49" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/42hf-600.webp" srcset="../assets/gallery/42hf-600.webp 600w, ../assets/gallery/42hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 50" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/43hf-600.webp" srcset="../assets/gallery/43hf-600.webp 600w, ../assets/gallery/43hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 51" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/44hf-600.webp" srcset="../assets/gallery/44hf-600.webp 600w, ../assets/gallery/44hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 52" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/45hf-600.webp" srcset="../assets/gallery/45hf-600.webp 600w, ../assets/gallery/45hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 53" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/9qf-600.webp" srcset="../assets/gallery/9qf-600.webp 600w, ../assets/gallery/9qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 54" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 10: HF Bilder 46–50, QF Bild 10 -->
-                <div class="grid-item big">
-                    <img src="../assets/gallery/46hf-600.webp" srcset="../assets/gallery/46hf-600.webp 600w, ../assets/gallery/46hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 55" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/47hf-600.webp" srcset="../assets/gallery/47hf-600.webp 600w, ../assets/gallery/47hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 56" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/48hf-600.webp" srcset="../assets/gallery/48hf-600.webp 600w, ../assets/gallery/48hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 57" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/49hf-600.webp" srcset="../assets/gallery/49hf-600.webp 600w, ../assets/gallery/49hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 58" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/50hf-600.webp" srcset="../assets/gallery/50hf-600.webp 600w, ../assets/gallery/50hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 59" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/10qf-600.webp" srcset="../assets/gallery/10qf-600.webp 600w, ../assets/gallery/10qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 60" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 11: HF Bilder 51–55, QF Bild 11 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/51hf-600.webp" srcset="../assets/gallery/51hf-600.webp 600w, ../assets/gallery/51hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 61" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/52hf-600.webp" srcset="../assets/gallery/52hf-600.webp 600w, ../assets/gallery/52hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 62" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/53hf-600.webp" srcset="../assets/gallery/53hf-600.webp 600w, ../assets/gallery/53hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 63" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/54hf-600.webp" srcset="../assets/gallery/54hf-600.webp 600w, ../assets/gallery/54hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 64" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/55hf-600.webp" srcset="../assets/gallery/55hf-600.webp 600w, ../assets/gallery/55hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 65" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/11qf-600.webp" srcset="../assets/gallery/11qf-600.webp 600w, ../assets/gallery/11qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 66" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 12: HF Bilder 56–60, QF Bild 12 -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/56hf-600.webp" srcset="../assets/gallery/56hf-600.webp 600w, ../assets/gallery/56hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 67" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/57hf-600.webp" srcset="../assets/gallery/57hf-600.webp 600w, ../assets/gallery/57hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 68" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/58hf-600.webp" srcset="../assets/gallery/58hf-600.webp 600w, ../assets/gallery/58hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 69" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/59hf-600.webp" srcset="../assets/gallery/59hf-600.webp 600w, ../assets/gallery/59hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 70" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/60hf-600.webp" srcset="../assets/gallery/60hf-600.webp 600w, ../assets/gallery/60hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 71" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/12qf-600.webp" srcset="../assets/gallery/12qf-600.webp 600w, ../assets/gallery/12qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 72" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Gruppe 13: HF Bilder 61–65, QF Bild 13 -->
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/61hf-600.webp" srcset="../assets/gallery/61hf-600.webp 600w, ../assets/gallery/61hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 73" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/62hf-600.webp" srcset="../assets/gallery/62hf-600.webp 600w, ../assets/gallery/62hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 74" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/63hf-600.webp" srcset="../assets/gallery/63hf-600.webp 600w, ../assets/gallery/63hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 75" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/64hf-600.webp" srcset="../assets/gallery/64hf-600.webp 600w, ../assets/gallery/64hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 76" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/65hf-600.webp" srcset="../assets/gallery/65hf-600.webp 600w, ../assets/gallery/65hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 77" loading="lazy" decoding="async">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/13qf-600.webp" srcset="../assets/gallery/13qf-600.webp 600w, ../assets/gallery/13qf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 78" loading="lazy" decoding="async">
-                </div>
-
-                <!-- Abschließendes HF-Bild (Nr. 66) -->
-                <div class="grid-item">
-                    <img src="../assets/gallery/66hf-600.webp" srcset="../assets/gallery/66hf-600.webp 600w, ../assets/gallery/66hf-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Bild 79" loading="lazy" decoding="async">
-                </div>
-            </div>
+    <footer class="gallery-footer">
+        <div>
+            <img src="../assets/img/logo-v2-transparent.png" alt="Papeterie Klingbeil Jena" width="900" height="487" loading="lazy">
+            <p>Schreibkultur und besondere Dinge – persönlich ausgewählt in Jena.</p>
         </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div class="modal fade" id="galleryLightbox" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
-                <div class="modal-body">
-                    <button type="button" class="lightbox-nav lightbox-prev" aria-label="Vorheriges Bild">
-                        <i class="bi bi-chevron-left"></i>
-                    </button>
-                    <img id="lightboxImage" src="" alt="">
-                    <button type="button" class="lightbox-nav lightbox-next" aria-label="Nächstes Bild">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+        <nav aria-label="Rechtliche Navigation">
+            <a href="../index.html">Startseite</a>
+            <a href="../datenschutzerklärung/datenschutzerklärung.html">Datenschutz</a>
+            <a href="../impressum/impressum.html">Impressum</a>
+        </nav>
+        <p>© <span data-year></span> Papeterie Klingbeil</p>
+    </footer>
 </body>
-
 </html>
