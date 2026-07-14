@@ -1,263 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie - Papeterie Klingbeil</title>
-    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <style>
-        /* Hero-Section Beispiel */
-        #hero {
-            min-height: 60vh;
-            background: url('../assets/img/hero.webp') center center/cover no-repeat;
-            position: relative;
-            color: #fff;
-        }
-
-        #hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            /* dunkler Overlay-Effekt */
-        }
-
-        #hero .hero-content {
-            position: relative;
-            z-index: 1;
-            /* über Overlay */
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        /* Galerie: Masonry-ähnliches Grid */
-        .grid-container {
-            display: grid;
-            /* Mit auto-fill + minmax füllt das Grid dynamisch den Platz */
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            /* Automatische Zeilenhöhe (wir nutzen grid-auto-rows + Span-Klassen) */
-            grid-auto-rows: 200px;
-            gap: 10px;
-            margin-top: 50px;
-            /* etwas Abstand zum Titel */
-        }
-
-        .grid-item {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .grid-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .grid-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Größere Felder: doppelte Höhe oder doppelte Breite */
-        .grid-item.big {
-            grid-row: span 2;
-            /* doppelte Höhe */
-        }
-
-        .grid-item.wide {
-            grid-column: span 2;
-            /* doppelte Breite */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galerie der Papeterie Klingbeil in Jena – 79 Eindrücke aus unserem Geschäft und Sortiment.">
+    <meta name="theme-color" content="#06191b">
+    <title>Galerie · Papeterie Klingbeil Jena</title>
+    <link rel="canonical" href="https://www.papeterie-klingbeil.de/gallery/gallery.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Papeterie Klingbeil">
+    <meta property="og:title" content="Galerie · Papeterie Klingbeil Jena">
+    <meta property="og:description" content="79 Einblicke in unseren Laden, auf feine Schreibgeräte, besonderes Papier und Geschenkideen mit Charakter.">
+    <meta property="og:url" content="https://www.papeterie-klingbeil.de/gallery/gallery.html">
+    <meta property="og:image" content="https://www.papeterie-klingbeil.de/og-papeterie-klingbeil.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Papeterie Klingbeil – Schreibkultur in Jena">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galerie · Papeterie Klingbeil Jena">
+    <meta name="twitter:description" content="79 Einblicke in unseren Laden und unser besonderes Sortiment.">
+    <meta name="twitter:image" content="https://www.papeterie-klingbeil.de/og-papeterie-klingbeil.jpg">
+    <link rel="preload" as="image" href="../assets/1hf-600-BNFiazcZ.webp" fetchpriority="high">
+  <script type="module" crossorigin src="../assets/gallery-BEx4f1i5.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/style-BnkqP6mj.js">
+  <link rel="stylesheet" crossorigin href="../assets/style-Dri31bIs.css">
+  <link rel="stylesheet" crossorigin href="../assets/gallery-CboX2dlz.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../assets/img/logo.webp" alt="Papeterie Klingbeil Logo" class="rounded-circle">
-                <span>Papeterie Klingbeil</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <a class="skip-link" href="#gallery">Zur Galerie springen</a>
+
+    <header class="gallery-header" data-header>
+        <a class="brand" href="../index.html" aria-label="Papeterie Klingbeil – zur Startseite">
+            <img src="../assets/logo-v2-transparent-DwHEgOXz.png" alt="Papeterie Klingbeil Jena" width="900" height="487">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="gallery-navigation" aria-label="Menü öffnen" data-menu-toggle>
+            <i class="ph ph-list" aria-hidden="true"></i>
+        </button>
+
+        <nav class="gallery-navigation" id="gallery-navigation" aria-label="Hauptnavigation" data-navigation>
+            <a href="../index.html#sortiment">Sortiment</a>
+            <a href="../index.html#besonderheiten">Besonderheiten</a>
+            <a href="../index.html#laden">Unser Laden</a>
+            <a class="is-active" href="#gallery" aria-current="page">Galerie</a>
+        </nav>
+
+        <a class="button button--compact header-cta" href="../index.html#kontakt">Besuch planen</a>
+    </header>
+
+    <main>
+        <section class="gallery-hero" aria-labelledby="gallery-title">
+            <div class="gallery-hero__rail" aria-hidden="true">
+                <span>Jena</span>
+                <span>Saalstraße 21</span>
+            </div>
+
+            <div class="gallery-hero__copy">
+                <p class="eyebrow">Papeterie · Schreibkultur · Jena</p>
+                <h1 id="gallery-title">Augenblicke.<br>Mit Liebe<br>ausgewählt.</h1>
+                <div class="accent-line" aria-hidden="true"></div>
+                <p>Ein Blick in unseren Laden, auf feine Schreibgeräte, besonderes Papier und Geschenkideen mit Charakter.</p>
+                <a class="text-link" href="#gallery">79 Eindrücke entdecken <i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="gallery-hero__images" aria-label="Vorschau aus der Galerie">
+                <figure class="gallery-hero__image gallery-hero__image--wide">
+                    <img src="../assets/1qf-600-CJ5_M1HN.webp" alt="Einblick in die Papeterie Klingbeil" width="600" height="400" fetchpriority="high" decoding="async">
+                </figure>
+                <figure class="gallery-hero__image gallery-hero__image--portrait">
+                    <img src="../assets/1hf-600-BNFiazcZ.webp" alt="Detail aus dem Sortiment" width="450" height="600" fetchpriority="high" decoding="async">
+                </figure>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery" aria-labelledby="collection-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow--blue">Unser Laden in Bildern</p>
+                    <h2 id="collection-title">Entdecken Sie<br>jedes Detail.</h2>
+                </div>
+                <div class="section-heading__note">
+                    <p>Alle 79 Aufnahmen bleiben Teil der Galerie. Die großen Bilddateien laden erst, wenn Sie ein Motiv öffnen.</p>
+                    <p class="gallery-count"><span data-visible-count>0</span> von <span data-total-count>79</span> Bildern angezeigt</p>
+                </div>
+            </div>
+
+            <div class="gallery-grid" data-gallery-grid aria-live="polite"></div>
+            <div class="load-sentinel" data-load-sentinel aria-hidden="true"></div>
+
+            <button class="load-more" type="button" data-load-more>
+                Weitere Bilder zeigen
+                <i class="ph ph-arrow-down" aria-hidden="true"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#products">Sortiment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#features">Exklusivitäten</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Über uns</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Kontakt</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Galerie</a></li>
-                </ul>
-            </div>
+        </section>
+
+        <section class="gallery-cta" aria-labelledby="gallery-cta-title">
+            <p class="eyebrow">Am schönsten ist es persönlich</p>
+            <h2 id="gallery-cta-title">Neugierig geworden?</h2>
+            <p>Entdecken Sie das Sortiment in Ruhe vor Ort – wir beraten Sie gern.</p>
+            <a class="button" href="../index.html#kontakt">Besuch planen</a>
+        </section>
+    </main>
+
+    <dialog class="lightbox" data-lightbox aria-labelledby="lightbox-caption">
+        <div class="lightbox__bar">
+            <p id="lightbox-caption" data-lightbox-caption>Bildansicht</p>
+            <button class="icon-button" type="button" aria-label="Bildansicht schließen" data-lightbox-close>
+                <i class="ph ph-x" aria-hidden="true"></i>
+            </button>
         </div>
-    </nav>
 
-    <!-- Hero-Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="display-4">Willkommen in unserer Galerie</h1>
-            <p class="lead">Entdecke die schönsten Eindrücke</p>
+        <div class="lightbox__stage">
+            <button class="icon-button lightbox__nav lightbox__nav--prev" type="button" aria-label="Vorheriges Bild" data-lightbox-prev>
+                <i class="ph ph-arrow-left" aria-hidden="true"></i>
+            </button>
+            <img data-lightbox-image src="" alt="">
+            <button class="icon-button lightbox__nav lightbox__nav--next" type="button" aria-label="Nächstes Bild" data-lightbox-next>
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </button>
         </div>
-    </section>
+    </dialog>
 
-    <!-- Galerie-Section -->
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <div class="grid-container">
-                <!-- 30 Bilder-Beispiele (passe Pfade an deine Dateien an) -->
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image1.webp" alt="Bild 1" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image2.webp" alt="Bild 2" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image3.webp" alt="Bild 3" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image4.webp" alt="Bild 4" loading="lazy">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image5.webp" alt="Bild 5" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image6.webp" alt="Bild 6" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image7.webp" alt="Bild 7" loading="lazy">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image8.webp" alt="Bild 8" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image9.webp" alt="Bild 9" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image10.webp" alt="Bild 10" loading="lazy">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image11.webp" alt="Bild 11" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image12.webp" alt="Bild 12" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image13.webp" alt="Bild 13" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image14.webp" alt="Bild 14" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image15.webp" alt="Bild 15" loading="lazy">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image16.webp" alt="Bild 16" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image17.webp" alt="Bild 17" loading="lazy">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image18.webp" alt="Bild 18" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image19.webp" alt="Bild 19" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image20.webp" alt="Bild 20" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image21.webp" alt="Bild 21" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image22.webp" alt="Bild 22" loading="lazy">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image23.webp" alt="Bild 23" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image24.webp" alt="Bild 24" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image25.webp" alt="Bild 25" loading="lazy">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image26.webp" alt="Bild 26" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image27.webp" alt="Bild 27" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image28.webp" alt="Bild 28" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image29.webp" alt="Bild 29" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image30.webp" alt="Bild 30" loading="lazy">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image31.webp" alt="Bild 31" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image32.webp" alt="Bild 32" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image33.webp" alt="Bild 33" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image34.webp" alt="Bild 34" loading="lazy">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image35.webp" alt="Bild 35" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image36.webp" alt="Bild 36" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image37.webp" alt="Bild 37" loading="lazy">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image38.webp" alt="Bild 38" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image39.webp" alt="Bild 39" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image40.webp" alt="Bild 40" loading="lazy">
-                </div>
-                <div class="grid-item big">
-                    <img src="../assets/gallery/image41.webp" alt="Bild 41" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image42.webp" alt="Bild 42" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image43.webp" alt="Bild 43" loading="lazy">
-                </div>
-                <div class="grid-item">
-                    <img src="../assets/gallery/image44.webp" alt="Bild 44" loading="lazy">
-                </div>
-                <div class="grid-item wide">
-                    <img src="../assets/gallery/image45.webp" alt="Bild 45" loading="lazy">
-                </div>
-                <div class="grid-item big wide">
-                    <img src="../assets/gallery/image46.webp" alt="Bild 46" loading="lazy">
-                </div>
-
-            </div>
+    <footer class="gallery-footer">
+        <div>
+            <img src="../assets/logo-v2-transparent-DwHEgOXz.png" alt="Papeterie Klingbeil Jena" width="900" height="487" loading="lazy">
+            <p>Schreibkultur und besondere Dinge – persönlich ausgewählt in Jena.</p>
         </div>
-    </section>
-
-    <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <nav aria-label="Rechtliche Navigation">
+            <a href="../index.html">Startseite</a>
+            <a href="../datenschutzerklärung/datenschutzerklärung.html">Datenschutz</a>
+            <a href="../impressum/impressum.html">Impressum</a>
+        </nav>
+        <p>© <span data-year></span> Papeterie Klingbeil</p>
+    </footer>
 </body>
-
 </html>
-#
