@@ -5,6 +5,9 @@ import compression from 'vite-plugin-compression';
 export default defineConfig({
   base: './',
   root: 'src',
+  server: {
+    host: '127.0.0.1',
+  },
   build: {
     outDir: '../dist',
     emptyOutDir: true, // Leert dist/ vor jedem Build (sonst bleiben alte Dateien liegen)

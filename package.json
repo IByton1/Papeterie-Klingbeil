@@ -15,6 +15,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/manrope": "^5.2.8",
+    "@phosphor-icons/web": "^2.1.2",
     "bootstrap": "^5.3.6"
   },
   "devDependencies": {
