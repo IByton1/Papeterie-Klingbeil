@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "node prepare-dist.js",
-    "deploy": "gh-pages -d dist1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "optimize": "node optimize-images.js",
     "build": "vite build"
@@ -27,5 +27,5 @@
     "vite": "^6.2.2",
     "vite-plugin-compression": "^0.5.1"
   },
-  "homepage": "https://ibyton1.github.io/MockupWebseite/"
+  "homepage": "https://ibyton1.github.io/Papeterie-Klingbeil/"
 }

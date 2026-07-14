@@ -9,7 +9,6 @@ yarn.lock
 .npm/
 
 # Build artifacts
-dist1/
 dist/
 build/
 
